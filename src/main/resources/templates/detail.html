@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>detail</title>
+<link rel="stylesheet" type="text/css" th:href="@{./css/menu.css}">
+<style type="text/css">
+.detail {
+	width: 800px;
+	height: auto;
+	border: 1px solid black;
+	margin: 10px;
+}
+</style>
+</head>
+<body>
+	<th:block th:insert="~{/menu.html :: menu}"></th:block>
+	<div class="detail">
+		<div class="bno" th:text="${result.bno}"></div>
+		<div class="btitle" th:text="${result.btitle}"></div>
+		<div class="m_name" th:text="${result.m_name}"></div>
+		<div class="bcontent" th:utext="${result.bcontent}"></div>
+		<div class="blike" th:text="${result.blike}"></div>
+		<div class="bip" th:text="${result.bip}"></div>
+		<button th:onclick="|location.href='@{/board}'|">게시판으로</button>
+	</div>
+	
+	<th:block th:insert="~{/menu.html :: footer}"></th:block>
+</body>
+</html>

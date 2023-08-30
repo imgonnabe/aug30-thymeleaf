@@ -1,0 +1,26 @@
+@charset "UTF-8";
+table {
+	width: 900px;
+	height: auto;
+	border: 3px solid black;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+thead {
+	background-color: pink;
+	font-weight: bolders;
+}
+
+tr {
+	border-bottom: 1px solid black;
+}
+
+tbody tr:hover {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+td {
+	padding: 2px;
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qorlwn.web.dao.BoardDAO">
+
+	<select id="list" resultType="BoardDTO">
+		select bno, btitle, m_name, m_id, blike, commentcount, bdate
+		from boardview
+		limit 0, 10
+	</select>
+	
+	<select id="detail" parameterType="Integer" resultType="BoardDTO">
+		select bno, btitle, bcontent, m_name, m_id, blike, bip, buuid
+		from boardview
+		where bno=#{bno}
+	</select>
+
+</mapper>

@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.qorlwn.web","l":"Aug30Application"},{"p":"com.qorlwn.web.controller","l":"IndexController"}]
