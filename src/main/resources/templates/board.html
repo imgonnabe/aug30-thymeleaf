@@ -9,6 +9,7 @@
 <body>
 <th:block th:insert="~{/menu.html :: menu}"></th:block>
 	<h1>보드</h1>
+	[[${session.m_name}]]님 반갑습니다.
 	<table>
 		<thead>
 			<tr>
@@ -29,5 +30,10 @@
 			</tr>
 		</tbody>
 	</table>
+	<div class="paging">
+		<th:block th:each="i : ${#numbers.sequence(1, 10)}">
+			<button th:onclick="|location.href='@{./board(pageNo=${i})}'|">[[${i}]]</button>
+		</th:block>
+	</div>
 </body>
 </html>

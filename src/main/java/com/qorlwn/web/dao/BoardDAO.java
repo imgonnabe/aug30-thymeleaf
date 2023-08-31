@@ -9,7 +9,7 @@ import com.qorlwn.web.dto.BoardDTO;
 @Mapper
 public interface BoardDAO {
 
-	List<BoardDTO> list();
+	List<BoardDTO> list(int pageNo);
 
 	BoardDTO detail(int bno);
 

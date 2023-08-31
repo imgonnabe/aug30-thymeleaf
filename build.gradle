@@ -32,6 +32,8 @@ dependencies {
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 	// mybatis
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.1'
+	// jsoup
+	implementation 'org.jsoup:jsoup:1.15.3'
 }
 
 tasks.named('test') {

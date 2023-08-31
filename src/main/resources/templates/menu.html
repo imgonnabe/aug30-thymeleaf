@@ -5,8 +5,9 @@
 		<ul>
 			<li th:onclick="|location.href='@{./board}'|">게시판</li>		
 			<li th:onclick="|location.href='@{./question}'|">문의</li>		
-			<li th:onclick="|location.href='@{./info}'|">정보보기</li>		
-			<li th:onclick="|location.href='@{./login}'|">로그인</li>		
+			<li th:onclick="|location.href='@{./info}'|">정보보기</li>	
+			<li th:if="${session.m_name eq null}" th:onclick="|location.href='@{./login}'|">로그인</li>
+			<li th:if="${session.m_name ne null}" th:onclick="|location.href='@{./logout}'|">로그아웃</li>		
 		</ul>
 	</nav>
 	
